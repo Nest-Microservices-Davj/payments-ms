@@ -14,6 +14,9 @@ export class PaymentSessionDto {
   @IsIn(['usd'])
   currency: string;
 
+  @IsString()
+  orderId: string;
+
   @IsArray()
   @ArrayMinSize(1)
   @ValidateNested({ each: true })
